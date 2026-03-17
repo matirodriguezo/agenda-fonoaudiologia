@@ -4,119 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fonoaudiología - Lavado de Oído Profesional</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        salud: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // Teal principal
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        /* Desplazamiento suave al hacer clic en los enlaces del menú */
         html { scroll-behavior: smooth; }
+        /* Pequeña animación para la foto de perfil */
+        .foto-hover:hover { transform: scale(1.02); transition: transform 0.3s ease; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans pt-16">
+<body class="bg-gray-50 text-gray-800 font-sans pt-16">
 
-    <nav class="bg-white shadow-md fixed w-full z-50 top-0 left-0">
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 top-0 left-0 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <a href="#inicio" class="font-bold text-xl text-blue-600">Fonoaudiología</a>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#sobre-mi" class="hover:text-blue-500 transition font-medium">Sobre Mí</a>
-                    <a href="#servicio" class="hover:text-blue-500 transition font-medium">Servicio</a>
-                    <a href="#ubicacion" class="hover:text-blue-500 transition font-medium">Ubicación</a>
+                <a href="#inicio" class="font-bold text-xl text-salud-700 flex items-center gap-2">
+                    <svg class="w-6 h-6 text-salud-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    Fonoaudiología
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#sobre-mi" class="text-gray-600 hover:text-salud-600 transition font-medium text-sm uppercase tracking-wide">Sobre Mí</a>
+                    <a href="#servicio" class="text-gray-600 hover:text-salud-600 transition font-medium text-sm uppercase tracking-wide">Servicio</a>
+                    <a href="#ubicacion" class="text-gray-600 hover:text-salud-600 transition font-medium text-sm uppercase tracking-wide">Ubicación</a>
                 </div>
-                <a href="#agenda" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition shadow-sm">
+                <a href="#agenda" class="bg-salud-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-salud-700 transition shadow-md hover:shadow-lg text-sm">
                     Reservar Hora
                 </a>
             </div>
         </div>
     </nav>
 
-    <section id="inicio" class="max-w-6xl mx-auto px-4 py-20 md:py-32 text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Lavado de Oído Profesional</h1>
-        <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto">Agenda tu hora de forma rápida y segura. Recupera tu bienestar auditivo con atención especializada y protocolos de higiene estrictos.</p>
-        <a href="#agenda" class="inline-block bg-blue-600 text-white text-lg px-8 py-4 rounded-full font-bold shadow-lg hover:bg-blue-700 hover:scale-105 transition transform duration-200">
-            Reservar hora
-        </a>
+    <section id="inicio" class="relative bg-gradient-to-br from-salud-50 via-white to-salud-100 max-w-full overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 py-24 md:py-36 text-center relative z-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-salud-100 text-salud-700 text-sm font-semibold mb-4 tracking-wider uppercase">Atención Especializada</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">Lavado de Oído <span class="text-salud-600">Profesional</span></h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto font-light">Recupera tu bienestar auditivo con un procedimiento rápido, seguro y con los más altos estándares de higiene.</p>
+            <a href="#agenda" class="inline-flex items-center gap-2 bg-salud-600 text-white text-lg px-8 py-4 rounded-full font-semibold shadow-xl hover:bg-salud-700 hover:-translate-y-1 transition transform duration-300">
+                Agendar mi hora ahora
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
     </section>
 
-    <section id="sobre-mi" class="bg-white py-16 md:py-24 border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-4 text-center md:text-left md:flex md:items-center md:gap-12">
-            <div class="w-40 h-40 bg-slate-200 rounded-full mx-auto md:mx-0 mb-8 md:mb-0 flex-shrink-0 overflow-hidden shadow-inner border-4 border-white">
-                <img src="https://via.placeholder.com/160" alt="Foto Fonoaudióloga" class="w-full h-full object-cover">
+    <section id="sobre-mi" class="bg-white py-20 md:py-28">
+        <div class="max-w-5xl mx-auto px-4 text-center md:text-left md:flex md:items-center md:gap-16">
+            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full mx-auto md:mx-0 mb-10 md:mb-0 flex-shrink-0 overflow-hidden shadow-2xl border-8 border-salud-50 relative foto-hover">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQEdrn5vefpmd9jBZwIATJMfx5ndXZXNb4zQ&s" alt="Foto Fonoaudióloga" class="w-full h-full object-cover">
             </div>
             <div>
-                <h2 class="text-3xl font-bold mb-4 text-slate-900">Sobre Mí</h2>
-                <p class="text-slate-600 leading-relaxed text-lg mb-4">
-                    Soy Fonoaudióloga titulada, dedicada a brindar atención personalizada y de calidad. 
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Conoce a tu <span class="text-salud-600">Profesional</span></h2>
+                <div class="w-20 h-1 bg-salud-500 mb-6 mx-auto md:mx-0 rounded-full"></div>
+                <p class="text-gray-600 leading-relaxed text-lg mb-4 font-light">
+                    Mi nombre es Marina, soy Fonoaudióloga titulada, dedicada a brindar una atención cercana, empática y de altísima calidad. 
                 </p>
-                <p class="text-slate-600 leading-relaxed text-lg">
-                    Mi enfoque principal es garantizar tu seguridad, higiene y comodidad durante todo el procedimiento clínico.
+                <p class="text-gray-600 leading-relaxed text-lg font-light">
+                    Entiendo que los procedimientos auditivos pueden generar dudas, por lo que mi enfoque principal es garantizar tu <strong>seguridad, higiene y total comodidad</strong> durante cada etapa de la consulta clínica.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="servicio" class="py-16 md:py-24 max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-10 text-slate-900">El Procedimiento</h2>
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-            <ul class="space-y-6 text-slate-700 text-lg">
-                <li class="flex items-start">
-                    <span class="text-blue-500 font-bold mr-3">✓</span>
-                    <div><strong>¿Qué es?</strong> Extracción segura y profesional de tapones de cerumen.</div>
-                </li>
-                <li class="flex items-start">
-                    <span class="text-blue-500 font-bold mr-3">✓</span>
-                    <div><strong>Duración:</strong> Aproximadamente 20 a 30 minutos por sesión.</div>
-                </li>
-                <li class="flex items-start">
-                    <span class="text-blue-500 font-bold mr-3">✓</span>
-                    <div><strong>Valor:</strong> $XX.XXX CLP.</div>
-                </li>
-                <li class="flex items-start">
-                    <span class="text-amber-500 font-bold mr-3">!</span>
-                    <div><strong>Indicaciones previas:</strong> Si utilizas gotas ablandadoras, aplícalas según las indicaciones al menos 3 días antes de la consulta.</div>
-                </li>
-                <li class="flex items-start">
-                    <span class="text-red-500 font-bold mr-3">✕</span>
-                    <div><strong>Contraindicaciones:</strong> No recomendado si presentas dolor agudo, supuración reciente o tímpano perforado sin evaluación médica previa.</div>
-                </li>
-            </ul>
+    <section id="servicio" class="bg-gray-50 py-20 md:py-28">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Detalles del Procedimiento</h2>
+                <p class="text-gray-500 text-lg">Todo lo que necesitas saber antes de tu cita.</p>
+            </div>
+            
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100">
+                <ul class="space-y-6 text-gray-700 text-lg">
+                    <li class="flex items-start bg-salud-50 p-4 rounded-xl">
+                        <svg class="w-6 h-6 text-salud-600 mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div><strong class="text-gray-900 block mb-1">¿Qué es?</strong> Extracción segura y profesional de tapones de cerumen mediante técnicas estandarizadas.</div>
+                    </li>
+                    <li class="flex items-start p-4">
+                        <svg class="w-6 h-6 text-salud-600 mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div><strong class="text-gray-900 block mb-1">Duración</strong> Aproximadamente 20 a 30 minutos por sesión.</div>
+                    </li>
+                    <li class="flex items-start bg-salud-50 p-4 rounded-xl">
+                        <svg class="w-6 h-6 text-salud-600 mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div><strong class="text-gray-900 block mb-1">Valor</strong> $XX.XXX CLP.</div>
+                    </li>
+                    <li class="flex items-start p-4">
+                        <svg class="w-6 h-6 text-amber-500 mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <div><strong class="text-gray-900 block mb-1">Indicaciones previas</strong> Si utilizas gotas ablandadoras, aplícalas según las indicaciones al menos 3 días antes de la consulta.</div>
+                    </li>
+                    <li class="flex items-start bg-red-50 p-4 rounded-xl">
+                        <svg class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div><strong class="text-gray-900 block mb-1">Contraindicaciones</strong> No recomendado si presentas dolor agudo, supuración reciente o tímpano perforado sin evaluación médica previa.</div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <section id="agenda" class="bg-blue-50 py-16 md:py-24">
+    <section id="agenda" class="bg-white py-20 md:py-28 border-t border-gray-100">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4 text-slate-900">Agenda tu Hora</h2>
-            <p class="text-slate-600 mb-10 text-lg">Selecciona el día y la hora que más te acomode en el calendario a continuación.</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Reserva tu Atención</h2>
+            <p class="text-gray-500 mb-10 text-lg">Selecciona el día y la hora. Recibirás una confirmación inmediata por correo.</p>
             
-            <div class="bg-white rounded-xl shadow-md overflow-hidden min-h-[700px] flex flex-col items-center justify-center border border-slate-200 w-full">
-                
-                <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/mati1865as/lavado-de-oido" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                <!-- Calendly inline widget end -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden min-h-[700px] flex flex-col items-center justify-center border border-gray-100 w-full">
+                <div class="calendly-inline-widget w-full" data-url="https://calendly.com/mati1865as/lavado-de-oido?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 </div>
         </div>
     </section>
 
-    <section id="ubicacion" class="py-16 md:py-24 max-w-5xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-4 text-slate-900">¿Dónde Atiendo?</h2>
-        <p class="mb-10 text-slate-600 text-lg">Consulta ubicada en [Ingresar Dirección Exacta], Concepción, Chile.</p>
-        
-        <div class="bg-slate-200 w-full h-80 md:h-96 rounded-xl overflow-hidden shadow-sm border border-slate-200 flex items-center justify-center">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.8443282012418!2d-72.35124307152854!3d-37.4643973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966bdd6ef9ed4b37%3A0x6879a8cf9efca311!2sLibrer%C3%ADa%20Manantiales!5e0!3m2!1ses!2scl!4v1773762128534!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section id="ubicacion" class="py-20 md:py-28 bg-gray-50 max-w-full px-4 text-center">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Ubicación de la Consulta</h2>
+            <p class="mb-10 text-gray-500 text-lg flex items-center justify-center gap-2">
+                <svg class="w-5 h-5 text-salud-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                [Ingresar Dirección Exacta], Concepción, Chile
+            </p>
+            
+            <div class="bg-white w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-lg border border-gray-100 flex items-center justify-center p-2">
+                <iframe class="rounded-2xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.8443282012418!2d-72.35124307152854!3d-37.4643973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966bdd6ef9ed4b37%3A0x6879a8cf9efca311!2sLibrer%C3%ADa%20Manantiales!5e0!3m2!1ses!2scl!4v1773762128534!5m2!1ses!2scl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+        </div>
     </section>
 
-    <section id="contacto" class="bg-slate-900 text-white py-16">
+    <section id="contacto" class="bg-gray-900 text-white py-20">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8">¿Tienes alguna duda adicional?</h2>
+            <h2 class="text-3xl font-bold mb-8">¿Tienes dudas adicionales?</h2>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto">Si necesitas hacer una consulta previa antes de agendar tu hora, no dudes en escribirme directamente.</p>
+            
             <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="https://wa.me/56959870302?text=Hola,%20vengo%20de%20la%20página%20web%20y%20quiero%20hacer%20una%20consulta%20sobre%20el%20lavado%20de%20oídos." target="_blank" class="bg-green-500 hover:bg-green-600 px-8 py-4 rounded-lg font-bold transition flex items-center justify-center text-lg">
-                    Contactar por WhatsApp
+                <a href="https://wa.me/56959870302?text=Hola,%20vengo%20de%20la%20página%20web%20y%20quiero%20hacer%20una%20consulta%20sobre%20el%20lavado%20de%20oídos." target="_blank" class="bg-green-500 hover:bg-green-400 px-8 py-4 rounded-full font-bold transition flex items-center justify-center text-lg shadow-lg hover:shadow-green-500/30">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    WhatsApp
                 </a>
-                <a href="mailto:correo@ejemplo.com" class="bg-slate-700 hover:bg-slate-600 px-8 py-4 rounded-lg font-bold transition flex items-center justify-center text-lg border border-slate-600">
-                    Enviar un Email
+                <a href="mailto:correo@ejemplo.com" class="bg-gray-800 hover:bg-gray-700 px-8 py-4 rounded-full font-bold transition flex items-center justify-center text-lg border border-gray-700">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    Enviar Email
                 </a>
             </div>
-            <p class="mt-12 text-slate-400 text-sm">© 2026 [Nombre de tu Hermana]. Todos los derechos reservados.</p>
+            <p class="mt-16 text-gray-500 text-sm font-light">© 2026 [Nombre de tu Hermana]. Todos los derechos reservados. <br> Desarrollado por Matías.</p>
         </div>
     </section>
 
