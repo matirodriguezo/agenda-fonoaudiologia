@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonoaudiología - Lavado de Oído Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Desplazamiento suave al hacer clic en los enlaces del menú */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans pt-16">
+
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 left-0">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#inicio" class="font-bold text-xl text-blue-600">Fonoaudiología</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#sobre-mi" class="hover:text-blue-500 transition font-medium">Sobre Mí</a>
+                    <a href="#servicio" class="hover:text-blue-500 transition font-medium">Servicio</a>
+                    <a href="#ubicacion" class="hover:text-blue-500 transition font-medium">Ubicación</a>
+                </div>
+                <a href="#agenda" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition shadow-sm">
+                    Reservar Hora
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="max-w-6xl mx-auto px-4 py-20 md:py-32 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Lavado de Oído Profesional</h1>
+        <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto">Agenda tu hora de forma rápida y segura. Recupera tu bienestar auditivo con atención especializada y protocolos de higiene estrictos.</p>
+        <a href="#agenda" class="inline-block bg-blue-600 text-white text-lg px-8 py-4 rounded-full font-bold shadow-lg hover:bg-blue-700 hover:scale-105 transition transform duration-200">
+            Reservar hora
+        </a>
+    </section>
+
+    <section id="sobre-mi" class="bg-white py-16 md:py-24 border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 text-center md:text-left md:flex md:items-center md:gap-12">
+            <div class="w-40 h-40 bg-slate-200 rounded-full mx-auto md:mx-0 mb-8 md:mb-0 flex-shrink-0 overflow-hidden shadow-inner border-4 border-white">
+                <img src="https://via.placeholder.com/160" alt="Foto Fonoaudióloga" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-4 text-slate-900">Sobre Mí</h2>
+                <p class="text-slate-600 leading-relaxed text-lg mb-4">
+                    Soy Fonoaudióloga titulada, dedicada a brindar atención personalizada y de calidad. 
+                </p>
+                <p class="text-slate-600 leading-relaxed text-lg">
+                    Mi enfoque principal es garantizar tu seguridad, higiene y comodidad durante todo el procedimiento clínico.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicio" class="py-16 md:py-24 max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 text-slate-900">El Procedimiento</h2>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <ul class="space-y-6 text-slate-700 text-lg">
+                <li class="flex items-start">
+                    <span class="text-blue-500 font-bold mr-3">✓</span>
+                    <div><strong>¿Qué es?</strong> Extracción segura y profesional de tapones de cerumen.</div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-500 font-bold mr-3">✓</span>
+                    <div><strong>Duración:</strong> Aproximadamente 20 a 30 minutos por sesión.</div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-500 font-bold mr-3">✓</span>
+                    <div><strong>Valor:</strong> $XX.XXX CLP.</div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-amber-500 font-bold mr-3">!</span>
+                    <div><strong>Indicaciones previas:</strong> Si utilizas gotas ablandadoras, aplícalas según las indicaciones al menos 3 días antes de la consulta.</div>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-red-500 font-bold mr-3">✕</span>
+                    <div><strong>Contraindicaciones:</strong> No recomendado si presentas dolor agudo, supuración reciente o tímpano perforado sin evaluación médica previa.</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="agenda" class="bg-blue-50 py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-slate-900">Agenda tu Hora</h2>
+            <p class="text-slate-600 mb-10 text-lg">Selecciona el día y la hora que más te acomode en el calendario a continuación.</p>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden min-h-[700px] flex flex-col items-center justify-center border border-slate-200 w-full">
+                
+                <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/mati1865as/lavado-de-oido" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+                </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="py-16 md:py-24 max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4 text-slate-900">¿Dónde Atiendo?</h2>
+        <p class="mb-10 text-slate-600 text-lg">Consulta ubicada en [Ingresar Dirección Exacta], Concepción, Chile.</p>
+        
+        <div class="bg-slate-200 w-full h-80 md:h-96 rounded-xl overflow-hidden shadow-sm border border-slate-200 flex items-center justify-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.8443282012418!2d-72.35124307152854!3d-37.4643973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966bdd6ef9ed4b37%3A0x6879a8cf9efca311!2sLibrer%C3%ADa%20Manantiales!5e0!3m2!1ses!2scl!4v1773762128534!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+    </section>
+
+    <section id="contacto" class="bg-slate-900 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">¿Tienes alguna duda adicional?</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="https://wa.me/56959870302?text=Hola,%20vengo%20de%20la%20página%20web%20y%20quiero%20hacer%20una%20consulta%20sobre%20el%20lavado%20de%20oídos." target="_blank" class="bg-green-500 hover:bg-green-600 px-8 py-4 rounded-lg font-bold transition flex items-center justify-center text-lg">
+                    Contactar por WhatsApp
+                </a>
+                <a href="mailto:correo@ejemplo.com" class="bg-slate-700 hover:bg-slate-600 px-8 py-4 rounded-lg font-bold transition flex items-center justify-center text-lg border border-slate-600">
+                    Enviar un Email
+                </a>
+            </div>
+            <p class="mt-12 text-slate-400 text-sm">© 2026 [Nombre de tu Hermana]. Todos los derechos reservados.</p>
+        </div>
+    </section>
+
+</body>
+</html>
